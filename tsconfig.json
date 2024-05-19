@@ -9,7 +9,6 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    "target": "es2015",
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -24,7 +23,7 @@
     ],
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ]
     }
   },
