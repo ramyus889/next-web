@@ -3,7 +3,7 @@ import { Mooli } from "next/font/google";
 import "./globals.css";
 import "/css/fontStyle.css";
 import "/css/Uiverse.css";
-import NavbarNextUi from "../componentsUi/NavbarNextUi";
+import { Providers } from "./providers";
 
 const fontStyle = Mooli({ subsets: ["latin"], weight: "400" });
 
@@ -18,13 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning={true}>
       <body className={fontStyle.className}>
-        <div className="overflow-x-hidden">
-          <NavbarNextUi />
-
-          {children}
-        </div>
+        <Providers>
+          <div className="">{children}</div>
+        </Providers>
       </body>
     </html>
   );
